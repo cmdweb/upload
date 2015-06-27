@@ -99,6 +99,7 @@ class Upload {
             $altura = $larguraP;
             $largura = ($altura*$x) / $x;
         }
+        
         $nova = imagecreatetruecolor($largura, $altura);
         if($a == 2){
             imagealphablending ($nova, true);
