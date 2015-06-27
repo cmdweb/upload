@@ -1,0 +1,22 @@
+{
+  "name": "alcatraz/upload",
+  "description": "Upload Alcatraz Framework.",
+  "authors": [
+    {
+      "name": "Gabriel Malaquias",
+      "email": "g@gmalaquias.com"
+    }
+  ],
+  "keywords": ["alcatraz", "upload"],
+  "license": "MIT",
+  "type": "library",
+   "autoload": {
+        "psr-0": { "Alcatraz\\Upload\\": "" }
+    },
+  "require" : {
+    "alcatraz/string": "1.0.0",
+    "alcatraz/annotation": "1.0.0"
+  },
+  "target-dir": "Alcatraz/Upload"
+
+}
