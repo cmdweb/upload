@@ -5,6 +5,8 @@
  * Time: 22:58
  */
 
+namespace Alcatraz\Upload;
+
 class Upload {
 
     /**
@@ -13,9 +15,9 @@ class Upload {
      * @param int $mb
      * @return mixed
      */
-    function upload($file, $name, $folder, $mb = 15){
+    public static function upload($file, $name, $folder, $mb = 15){
         // Pasta onde o arquivo vai ser salvo
-        $_UP['pasta'] =$folder;
+        $_UP['pasta'] = $folder;
         // Tamanho m�ximo do arquivo (em Bytes)
         $_UP['tamanho'] = 1024 * 1024 * $mb; // 15Mb
         // Array com as extens�es permitidas
@@ -36,7 +38,9 @@ class Upload {
         }
         // Caso script chegue a esse ponto, n�o houve erro com o upload e o PHP pode continuar
         // Faz a verifica��o da extens�o do arquivo
-        $extensao = strtolower(end(explode('.', $file['name'])));
+        $ex = explode('.', $file['name']);
+
+        $extensao = strtolower($ex[count($ex) - 1]);
         /*if (array_search($extensao, $_UP['extensoes']) === false) {
             echo "Por favor, envie arquivos com as seguintes extens�es: jpg, png ou gif";
         }*/
@@ -76,7 +80,7 @@ class Upload {
     }
 
 
-    function upload_img($tmp, $name, $nome_imagem, $larguraP, $pasta){
+    public static function uploadImg($tmp, $name, $nome_imagem, $larguraP, $pasta){
         $ext = strtolower($name);
         $aux =explode('.',$ext);
         $ext  = end($aux);
