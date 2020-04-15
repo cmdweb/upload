@@ -4,18 +4,14 @@
   "authors": [
     {
       "name": "Gabriel Malaquias",
-      "email": "g@gmalaquias.com"
+      "email": "gemalaquias@gmail.com"
     }
   ],
   "keywords": ["alcatraz", "upload"],
   "license": "MIT",
   "type": "library",
-   "autoload": {
+  "autoload": {
         "psr-0": { "Alcatraz\\Upload\\": "" }
-    },
-  "require" : {
-
   },
   "target-dir": "Alcatraz/Upload"
-
 }
